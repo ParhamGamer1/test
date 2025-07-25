@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>PixelMine - سرور ماینکرفت</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Tahoma, sans-serif;
+      background: #0e0e23;
+      color: #e0e0e0;
+      direction: rtl;
+      line-height: 1.7;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #1a1a40;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .navbar h1 {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .menu-toggle {
+      font-size: 26px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .menu {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #2a2a5a;
+      border-radius: 8px;
+      display: none;
+      flex-direction: column;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 999;
+    }
+
+    .menu a {
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .menu a:hover {
+      background: #3f3f7f;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    header h2 {
+      font-size: 2.4rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .section h2 { font-size: 2rem; margin-bottom: 10px; }
+    .section p { font-size: 1.1rem; color: #ccc; }
+    .arcade { color: orange; }
+    .bedwars { color: #2196f3; }
+    .roleplay { color: #e53935; }
+
+    .shop {
+      background: #191933;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin: 50px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .shop h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffeb3b;
+    }
+
+    .product {
+      background: #2a2a5a;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .product-name {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 1.2rem;
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+
+    .buy-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      text-align: center;
+      margin: 60px 0 30px;
+      color: #777;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>PixelMine</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="navMenu">
+      <a href="minecraft://?addExternalServer=PixelMine|play.pixelsv.ir:19132">🎮 ورود به سرور</a>
+      <a href="https://rubika.ir/pixelmine_owner" target="_blank">🛒 رفتن به فروشگاه</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h2>به سایت سرور پیکسل ماین خوش آمدید</h2>
+    <p>ما برای سادگی شما تلاش خواهیم کرد</p>
+  </header>
+
+  <!-- Sections -->
+  <div class="section arcade">
+    <h2>Arcade</h2>
+    <p>برو با دوستات بجنگ و پیروز شو</p>
+  </div>
+
+  <div class="section bedwars">
+    <h2>Bedwars</h2>
+    <p>برو تخت دوستات رو بزن و نزار تختخواب بزنن</p>
+  </div>
+
+  <div class="section roleplay">
+    <h2>Roleplay</h2>
+    <p>زندگیت رو توی رول پلی بساز</p>
+  </div>
+
+  <div class="section">
+    <p>ما برای آسایش شما تلاش خواهیم کرد</p>
+  </div>
+
+  <!-- Shop -->
+  <div class="shop">
+    <h3>🎁 فروشگاه</h3>
+    <div class="product">
+      <div class="product-name">رنک Pixel</div>
+      <div class="product-price">10,000 تومان</div>
+      <button class="buy-btn" onclick="window.location.href='https://rubika.ir/pixelmine_owner'">
+        خرید از روبیکا
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    PixelMine Team
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+
+</body>
+</html>
